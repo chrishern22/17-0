@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chore Scheduler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏠 Chore Scheduler</h1>
+        
+        <div class="section">
+            <h2>Add Roommates</h2>
+            <div class="input-group">
+                <input type="text" id="roommateInput" placeholder="Enter roommate name">
+                <button onclick="addRoommate()">Add</button>
+            </div>
+            <ul id="roommateList"></ul>
+        </div>
+
+        <div class="section">
+            <h2>Add Chores</h2>
+            <div class="input-group">
+                <input type="text" id="choreInput" placeholder="Enter chore name">
+                <button onclick="addChore()">Add</button>
+            </div>
+            <ul id="choreList"></ul>
+        </div>
+
+        <div class="section">
+            <h2>Weekly Schedule</h2>
+            <button onclick="generateSchedule()" class="primary-btn">Generate Schedule</button>
+            <div id="schedule"></div>
+        </div>
+
+        <div class="section">
+            <h2>Current Week</h2>
+            <p>Week: <span id="currentWeek">1</span></p>
+            <button onclick="nextWeek()">Next Week →</button>
+            <button onclick="resetWeeks()">Reset</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
