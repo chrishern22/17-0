@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17-0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gridiron-styles.css">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div class="welcome-screen" id="welcome-screen">
+        <div class="welcome-container">
+            <header class="welcome-header">
+                <div class="header-left">
+                    <span class="brand-text">17-0</span>
+                </div>
+                <div class="header-center">
+                    <span class="section-title">SQUAD BUILDER</span>
+                </div>
+            </header>
+
+            <main class="welcome-content">
+                <h1 class="welcome-title">CHOOSE YOUR PATH</h1>
+                <p class="welcome-subtitle">Draft legendary players, iconic units, and elite coaches. Build the perfect season.</p>
+
+                <button class="start-btn" id="start-btn">
+                    <span class="btn-text">BEGIN</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </main>
+        </div>
+    </div>
+
+    <!-- Main App Screen -->
+    <div class="app-container" id="app-container" style="display: none;">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-left">
+                <span class="brand-text">17-0</span>
+            </div>
+            <div class="header-center">
+                <span class="section-title">SQUAD BUILDER</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Introduction Section -->
+            <section class="intro-section">
+                <h1 class="main-title">BUILD YOUR SQUAD</h1>
+                <p class="subtitle">Draft legendary players, iconic units, and elite coaches. Simulate your path to glory.</p>
+            </section>
+
+            <!-- Squad Selection Matrix -->
+            <section class="squad-matrix">
+                <div class="matrix-header">
+                    <h2 class="matrix-title">SQUAD SELECTION MATRIX</h2>
+                    <div class="matrix-meta">
+                        <span class="meta-item" id="slot-count">0/9 SLOTS FILLED</span>
+                    </div>
+                </div>
+
+                <!-- Skill Positions -->
+                <div class="selection-group">
+                    <div class="group-header">
+                        <span class="group-number">01</span>
+                        <h3 class="group-title">SKILL POSITIONS</h3>
+                        <p class="group-desc">Select individual stars for QB, RB, WR, TE, K</p>
+                    </div>
+
+                    <div class="position-grid">
+                        <!-- QB Slot -->
+                        <div class="position-slot" data-position="qb" data-type="player">
+                            <div class="slot-label">QB</div>
+                            <div class="slot-empty">SELECT QUARTERBACK</div>
+                            <div class="slot-content" style="display: none;">
+                                <div class="player-name"></div>
+                                <div class="player-ovr"></div>
+                            </div>
+                        </div>
+
+                        <!-- RB Slot -->
+                        <div class="position-slot" data-position="rb" data-type="player">
+                            <div class="slot-label">RB</div>
+                            <div class="slot-empty">SELECT RUNNING BACK</div>
+                            <div class="slot-content" style="display: none;">
+                                <div class="player-name"></div>
+                                <div class="player-ovr"></div>
+                            </div>
+                        </div>
+
+                        <!-- WR1 Slot -->
+                        <div class="position-slot" data-position="wr1" data-type="player">
+                            <div class="slot-label">WR1</div>
+                            <div class="slot-empty">SELECT WIDE RECEIVER</div>
+                            <div class="slot-content" style="display: none;">
+                                <div class="player-name"></div>
+                                <div class="player-ovr"></div>
+                            </div>
+                        </div>
+
+                        <!-- WR2 Slot -->
+                        <div class="position-slot" data-position="wr2" data-type="player">
+                            <div class="slot-label">WR2</div>
+                            <div class="slot-empty">SELECT WIDE RECEIVER</div>
+                            <div class="slot-content" style="display: none;">
+                                <div class="player-name"></div>
+                                <div class="player-ovr"></div>
+                            </div>
+                        </div>
+
+                        <!-- TE Slot -->
+                        <div class="position-slot" data-position="te" data-type="player">
+                            <div class="slot-label">TE</div>
+                            <div class="slot-empty">SELECT TIGHT END</div>
+                            <div class="slot-content" style="display: none;">
+                                <div class="player-name"></div>
+                                <div class="player-ovr"></div>
+                            </div>
+                        </div>
+
+                        <!-- Kicker Slot -->
+                        <div class="position-slot" data-position="kicker" data-type="player">
+                            <div class="slot-label">K</div>
+                            <div class="slot-empty">SELECT KICKER</div>
+                            <div class="slot-content" style="display: none;">
+                                <div class="player-name"></div>
+                                <div class="player-ovr"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Units -->
+                <div class="selection-group">
+                    <div class="group-header">
+                        <span class="group-number">02</span>
+                        <h3 class="group-title">TEAM UNITS</h3>
+                        <p class="group-desc">Select complete offensive line and defensive units</p>
+                    </div>
+
+                    <div class="position-grid">
+                        <!-- Offensive Line Slot -->
+                        <div class="position-slot unit-slot" data-position="ol" data-type="unit">
+                            <div class="slot-label">OL</div>
+                            <div class="slot-empty">SELECT OFFENSIVE LINE UNIT</div>
+                            <div class="slot-content" style="display: none;">
+                                <div class="player-name"></div>
+                                <div class="player-ovr"></div>
+                            </div>
+                        </div>
+
+                        <!-- Defensive Unit Slot -->
+                        <div class="position-slot unit-slot" data-position="defense" data-type="unit">
+                            <div class="slot-label">DEF</div>
+                            <div class="slot-empty">SELECT DEFENSIVE UNIT</div>
+                            <div class="slot-content" style="display: none;">
+                                <div class="player-name"></div>
+                                <div class="player-ovr"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Head Coach -->
+                <div class="selection-group">
+                    <div class="group-header">
+                        <span class="group-number">03</span>
+                        <h3 class="group-title">HEAD COACH</h3>
+                        <p class="group-desc">Select an iconic head coach to lead your squad</p>
+                    </div>
+
+                    <div class="position-grid">
+                        <!-- Coach Slot -->
+                        <div class="position-slot coach-slot" data-position="coach" data-type="coach">
+                            <div class="slot-label">HC</div>
+                            <div class="slot-empty">SELECT HEAD COACH</div>
+                            <div class="slot-content" style="display: none;">
+                                <div class="player-name"></div>
+                                <div class="player-ovr"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Simulate Button -->
+            <section class="action-section">
+                <button class="simulate-btn" id="simulate-btn" disabled>
+                    <span class="btn-text">SIMULATE SEASON</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="results-section" style="display: none;">
+                <div class="results-header">
+                    <h2 class="results-title">SIMULATION RESULTS</h2>
+                    <p class="results-subtitle">Your squad's season projection</p>
+                </div>
+
+                <div class="results-grid">
+                    <!-- Team OVR -->
+                    <div class="result-card primary-card">
+                        <div class="result-label">TEAM OVERALL</div>
+                        <div class="result-value" id="team-ovr">0</div>
+                        <div class="result-sub">OVR RATING</div>
+                    </div>
+
+                    <!-- Season Record -->
+                    <div class="result-card">
+                        <div class="result-label">REGULAR SEASON</div>
+                        <div class="season-record" id="season-record">
+                            <span class="record-wins">0</span>
+                            <span class="record-sep">-</span>
+                            <span class="record-losses">0</span>
+                        </div>
+                        <div class="result-sub" id="record-label">WIN-LOSS RECORD</div>
+                    </div>
+
+                    <!-- Playoff Result -->
+                    <div class="result-card">
+                        <div class="result-label">PLAYOFF RESULT</div>
+                        <div class="result-value" id="playoff-result">-</div>
+                        <div class="result-sub">FINAL STANDING</div>
+                    </div>
+
+                    <!-- Super Bowl Status -->
+                    <div class="result-card highlight-card">
+                        <div class="result-label">CHAMPIONSHIP</div>
+                        <div class="result-value" id="championship-status">-</div>
+                        <div class="result-sub">SUPER BOWL</div>
+                    </div>
+                </div>
+
+                <button class="reset-btn" id="reset-btn">
+                    <span class="btn-text">BUILD NEW SQUAD</span>
+                </button>
+            </section>
+        </main>
+    </div>
+
+    <!-- Selection Modal -->
+    <div class="modal-overlay" id="selection-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title">Select Player</h3>
+                <button class="modal-close" id="modal-close">×</button>
+            </div>
+            <div class="modal-content">
+                <div class="selection-list" id="selection-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="gridiron-app.js"></script>
+</body>
+</html>
