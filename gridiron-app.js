@@ -18,7 +18,7 @@ const playerDatabase = {
         { name: "Joe Burrow", ovr: 97, team: "Bengals", era: "modern", legendary: false, rarity: "elite", passingYards: 4600, tds: 38 },
         { name: "Patrick Mahomes", ovr: 94, team: "Chiefs", era: "modern", legendary: false, rarity: "elite", passingYards: 4500, tds: 38 },
         { name: "Lamar Jackson", ovr: 93, team: "Ravens", era: "modern", legendary: false, rarity: "elite", passingYards: 3800, tds: 30 },
-        { name: "Jalen Hurts", ovr: 93, team: "Eagles", era: "modern", legendary: false, rarity: "elite", passingYards: 3900, tds: 32 },
+        { name: "Jalen Hurts", ovr: 81, team: "Eagles", era: "modern", legendary: false, rarity: "rare", passingYards: 3900, tds: 32 },
         // Rare
         { name: "Dak Prescott", ovr: 91, team: "Cowboys", era: "modern", legendary: false, rarity: "rare", passingYards: 4100, tds: 33 },
         { name: "Tua Tagovailoa", ovr: 90, team: "Dolphins", era: "modern", legendary: false, rarity: "rare", passingYards: 4200, tds: 34 },
